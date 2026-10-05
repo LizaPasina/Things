@@ -1,7 +1,4 @@
-// ================== SETTINGS ==================
-// Change texts, emojis and images here!
-// If you want to use an image instead of an emoji,
-// add: image: 'img/your-photo.jpg'
+
 const gifts = [
   {
     emoji: '💖',
