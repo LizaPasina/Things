@@ -44,12 +44,14 @@ const gifts = [
     label: 'A Star',
     title: 'You Are a Star',
     text: 'Shine bright and never let anyone dim your light.'
+    modalImage: 'img/you.jpg'
   },
   {
     emoji: '🎁',
     label: 'A Surprise',
     title: 'Smile!',
     text: 'You are the best. Always remember that! 💕'
+    modalImage: 'img/bunny.jpg'
   },
   {
     emoji: '💐',
