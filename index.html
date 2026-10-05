@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>С Днём Рождения! 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Падающие сердечки на фоне -->
+<div class="hearts-bg" id="heartsBg"></div>
+
+<!-- Ленточки по краям -->
+<div class="ribbon ribbon-left"></div>
+<div class="ribbon ribbon-right"></div>
+
+<!-- Заголовок -->
+<header class="hero">
+  <h1>С Днём Рождения!</h1>
+  <p class="subtitle">Дорогая <span class="name">[Имя]</span> 💕</p>
+  <p class="hint">Нажимай на подарочки ниже 👇</p>
+</header>
+
+<!-- Сетка квадратиков -->
+<main class="grid" id="grid">
+  <!-- Квадратики генерируются в JS -->
+</main>
+
+<!-- Модальное окно -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-icon" id="modalIcon">🎁</div>
+    <h2 class="modal-title" id="modalTitle"></h2>
+    <p class="modal-text" id="modalText"></p>
+  </div>
+</div>
+
+<!-- Конфетти-контейнер -->
+<div class="confetti-container" id="confettiContainer"></div>
+
+<footer class="footer">
+  <p>Сделано с любовью 💗</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
