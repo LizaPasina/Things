@@ -1,3 +1,4 @@
+
 const gifts = [
   {
     emoji: '💖',
@@ -213,7 +214,5 @@ function show67(x, y) {
   popup.style.left = x + 'px';
   popup.style.top = y + 'px';
   document.body.appendChild(popup);
-
-  // Удаляем через 1.2 секунды (или раньше, если тапнуть ещё раз)
   setTimeout(() => popup.remove(), 1200);
 }

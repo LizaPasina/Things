@@ -1,4 +1,4 @@
-
+/* ===== Базовые настройки ===== */
 * {
   margin: 0;
   padding: 0;
@@ -271,7 +271,6 @@ body {
   pointer-events: none;
 }
 
-/* Уже открытый подарок */
 .gift.opened {
   background: linear-gradient(145deg, var(--pink-3), var(--pink-2));
   box-shadow: inset 0 0 0 2px rgba(255,255,255,0.7);
