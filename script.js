@@ -52,12 +52,11 @@ const gifts = [
     text: 'You are the best. Always remember that! 💕'
   },
   {
-    // ← HERE: bouquet with a real image instead of emoji
-    image: 'img/bouquet.jpg',
     emoji: '💐',
     label: 'A Bouquet',
     title: 'A Bouquet of Flowers',
-    text: 'This virtual bouquet is for you — may it warm your heart. 🌷'
+    text: 'This virtual bouquet is for you — may it warm your heart. 🌷',
+    modalImage: 'img/bouquet.jpg'   // ← показывается ТОЛЬКО в модалке
   }
 ];
 
@@ -75,13 +74,8 @@ gifts.forEach((gift, index) => {
   div.className = 'gift';
   div.dataset.index = index;
 
-  // If gift has an image, render an <img>, otherwise an emoji
-  const media = gift.image
-    ? `<img class="gift-img" src="${gift.image}" alt="${gift.title}">`
-    : `<span class="emoji">${gift.emoji}</span>`;
-
   div.innerHTML = `
-    ${media}
+    <span class="emoji">${gift.emoji}</span>
     <span class="label">${gift.label}</span>
   `;
 
@@ -121,9 +115,9 @@ function openGift(index, event) {
   giftEl.classList.add('opened');
 
   setTimeout(() => {
-    // If the gift has an image, show it in the modal instead of an emoji
-    if (gift.image) {
-      modalIcon.innerHTML = `<img src="${gift.image}" alt="${gift.title}" class="modal-img">`;
+    // Если у подарка есть modalImage — показываем маленькую картинку над заголовком
+    if (gift.modalImage) {
+      modalIcon.innerHTML = `<img src="${gift.modalImage}" alt="${gift.title}" class="modal-img">`;
     } else {
       modalIcon.innerHTML = gift.emoji;
     }
