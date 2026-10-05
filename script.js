@@ -6,58 +6,58 @@ const gifts = [
   {
     emoji: '💖',
     label: 'For You',
-    title: 'You Are Amazing!',
-    text: 'Thank you for being you. You make this world brighter and kinder every single day.'
+    title: 'You are amazing',
+    text: 'Thank you for being you <3'
   },
   {
     emoji: '🎂',
     label: 'A Wish',
-    title: 'Happiness!',
-    text: 'May every day bring you joy, and may your smile never leave your face!'
+    title: 'Happiness',
+    text: 'I wish you happiness, health and wealth in life and whichever things u want!!'
   },
   {
     emoji: '🌸',
     label: 'Compliment',
     title: 'You Are Beautiful',
-    text: 'Beautiful, smart, kind — you combine all the best things in one person.'
+    text: 'Kind, interesting, understanding and much more. I hope you know this'
   },
   {
     emoji: '🎈',
-    label: 'A Dream',
-    title: 'May It Come True',
-    text: 'All your dreams will definitely come true. I truly believe in it!'
+    label: 'Dream',
+    title: 'May it come true',
+    text: 'All your dreams will definitely come true!!'
   },
   {
     emoji: '🍰',
-    label: 'Something Sweet',
-    title: 'Life Is Like a Cake',
-    text: 'May your life be as sweet as this birthday cake.'
+    label: 'Something sweet',
+    title: 'Cute cake',
+    text: 'May your life be as sweet as a cake'
   },
   {
     emoji: '💌',
-    label: 'A Postcard',
+    label: 'Postcard',
     title: 'With Love',
-    text: 'This little card is a piece of my warmth, just for you.'
+    text: 'This little card is a piece of my love just for you'
   },
   {
     emoji: '🌟',
-    label: 'A Star',
-    title: 'You Are a Star',
-    text: 'Shine bright and never let anyone dim your light.',
+    label: 'Star',
+    title: 'You are like a star',
+    text: 'Never be upset with yourself because someone looks up to you',
     modalImage: 'img/you.jpg'
   },
   {
     emoji: '🎁',
     label: 'A Surprise',
-    title: 'Smile!',
-    text: 'You are the best. Always remember that! 💕',
+    title: 'Bunny!',
+    text: 'You look like this bunny, they always remind me of you hehe',
     modalImage: 'img/bunny.jpg'
   },
   {
     emoji: '💐',
-    label: 'A Bouquet',
-    title: 'A Bouquet of Flowers',
-    text: 'This virtual bouquet is for you — may it warm your heart. 🌷',
+    label: 'Bouquet',
+    title: 'A bouquet of flowers',
+    text: 'This bouquet is for you since i cant give it to you irl',
     modalImage: 'img/bouquet.jpg'   // ← показывается ТОЛЬКО в модалке
   }
 ];
