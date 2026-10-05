@@ -124,7 +124,7 @@ body {
   .grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
 }
 
-/* ===== Квадрат-подарок ===== */
+/* ===== Gift square ===== */
 .gift {
   aspect-ratio: 1 / 1;
   background: linear-gradient(145deg, var(--pink-2), var(--pink-1));
@@ -143,15 +143,68 @@ body {
   border: 2px solid #fff;
 }
 
-.gift:active {
-  transform: scale(0.94);
-}
+.gift:active { transform: scale(0.94); }
 
 @media (hover: hover) {
   .gift:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 10px 24px rgba(255, 111, 165, 0.5);
   }
+}
+
+/* Emoji — ABOVE the ribbons */
+.gift .emoji {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(2.2rem, 11vw, 3rem);
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+}
+
+/* Image inside the gift square — ABOVE the ribbons */
+.gift-img {
+  position: relative;
+  z-index: 2;
+  width: 62%;
+  height: 62%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 3px 10px rgba(214, 51, 132, 0.35);
+}
+
+/* Label — also above */
+.gift .label {
+  position: relative;
+  z-index: 2;
+  margin-top: 6px;
+  font-size: clamp(0.75rem, 3.2vw, 0.95rem);
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(214,51,132,0.5);
+  padding: 0 6px;
+  text-align: center;
+}
+
+/* Cross ribbons — BELOW emoji / image */
+.gift::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  width: 10px; height: 100%;
+  background: rgba(255,255,255,0.55);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+.gift::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 100%; height: 10px;
+  background: rgba(255,255,255,0.55);
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Эмодзи — поверх ленточек */
