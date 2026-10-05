@@ -418,3 +418,72 @@ body {
   position: relative;
   z-index: 2;
 }
+/* ===== Кликабельное имя Nina ===== */
+.name {
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+  display: inline-block;
+}
+
+.name:active {
+  transform: scale(0.9);
+  color: var(--pink-1);
+}
+
+/* Небольшая подсказка — пульсация, чтобы было видно, что можно тапнуть */
+@keyframes namePulse {
+  0%, 100% { text-shadow: 0 0 0 rgba(255, 111, 165, 0); }
+  50%      { text-shadow: 0 0 12px rgba(255, 111, 165, 0.85); }
+}
+.name {
+  animation: namePulse 2.2s ease-in-out infinite;
+}
+
+/* ===== Конфетти из цифр 67 ===== */
+.number67 {
+  position: fixed;
+  font-weight: 800;
+  color: var(--pink-dark);
+  pointer-events: none;
+  z-index: 300;
+  text-shadow: 0 2px 6px rgba(255, 111, 165, 0.55);
+  animation: fly67 1.4s ease-out forwards;
+}
+
+@keyframes fly67 {
+  0% {
+    transform: translate(0, 0) scale(0.4) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1.1) rotate(0deg);
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) scale(0.8) rotate(var(--rot));
+    opacity: 0;
+  }
+}
+/* ===== Всплывающее окошко с 67 ===== */
+.popup67 {
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0);
+  background: linear-gradient(145deg, #fff0f6, #ffd1e3);
+  color: var(--pink-dark);
+  font-weight: 900;
+  font-size: 28px;
+  padding: 14px 22px;
+  border-radius: 18px;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 30px rgba(214, 51, 132, 0.45);
+  z-index: 400;
+  pointer-events: none;
+  animation: popup67 1.2s ease-out forwards;
+}
+
+@keyframes popup67 {
+  0%   { transform: translate(-50%, -50%) scale(0) rotate(-15deg); opacity: 0; }
+  25%  { transform: translate(-50%, -50%) scale(1.15) rotate(5deg); opacity: 1; }
+  50%  { transform: translate(-50%, -50%) scale(1) rotate(-3deg); opacity: 1; }
+  100% { transform: translate(-50%, -130%) scale(0.9) rotate(0deg); opacity: 0; }
+}

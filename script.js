@@ -168,3 +168,53 @@ function burstConfetti(x, y) {
     setTimeout(() => c.remove(), 1600);
   }
 }
+// ================== ИМЯ NINA → ОКНО С 67 ==================
+const nameTrigger = document.getElementById('nameTrigger');
+
+if (nameTrigger) {
+  nameTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();       // чтобы клик не дублировался в document (для музыки это ок)
+    show67(e.clientX, e.clientY);
+  });
+}
+
+function show67(x, y) {
+  // 1) Разлетающиеся цифры 67
+  const count = isMobile ? 16 : 28;  // на телефоне поменьше, чтобы не лагало
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    el.className = 'number67';
+    el.textContent = '67';
+
+    // Стартовая точка — там, где тапнули
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
+    el.style.fontSize = (14 + Math.random() * 22) + 'px'; // от 14 до 36px
+
+    // Случайное направление разлёта
+    const angle = Math.random() * Math.PI * 2;
+    const distance = 70 + Math.random() * 160;
+    const tx = Math.cos(angle) * distance;
+    const ty = Math.sin(angle) * distance + 40;
+    const rot = (Math.random() - 0.5) * 540;
+
+    el.style.setProperty('--tx', tx + 'px');
+    el.style.setProperty('--ty', ty + 'px');
+    el.style.setProperty('--rot', rot + 'deg');
+    el.style.animationDelay = (Math.random() * 0.15) + 's';
+
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 1700);
+  }
+
+  // 2) Само окошко с текстом «67»
+  const popup = document.createElement('div');
+  popup.className = 'popup67';
+  popup.textContent = '67';
+  popup.style.left = x + 'px';
+  popup.style.top = y + 'px';
+  document.body.appendChild(popup);
+
+  // Удаляем через 1.2 секунды (или раньше, если тапнуть ещё раз)
+  setTimeout(() => popup.remove(), 1200);
+}
